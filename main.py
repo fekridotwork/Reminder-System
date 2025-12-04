@@ -42,9 +42,9 @@ def main():
             print("  1) Simple")
             print("  2) Meeting")
             print("  3) Daily Routine")
-            rem_type = input("Type of reminder: :").strip()
+            rem_type = input("Type of reminder: ").strip()
 
-            rem_title = get_data("Please enter the reminder title.")
+            rem_title = get_data("Please enter the reminder title: ")
             rem_time = get_data("Please enter the reminder time: ")
 
             rem_id = next(id_gen)

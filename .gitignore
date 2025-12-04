@@ -1,5 +1,3 @@
 .idea/
-manager/__init__.py
-models/__init__.py
-HW12.pdf
-main.py
+manager/__pycache__/
+models/__pycache__/

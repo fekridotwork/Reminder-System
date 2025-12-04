@@ -5,7 +5,7 @@ from logging.handlers import RotatingFileHandler
 
 class ReminderManager:
     JSON_PATH = "data/reminders.json"
-    LOG_PATH = "logs/reminder.log"
+    LOG_PATH = "data/reminder.log"
 
     def __init__(self):
         self.reminders = load_data(self.JSON_PATH)
