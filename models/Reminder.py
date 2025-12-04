@@ -11,3 +11,7 @@ class Reminder(ABC):
     def remind(self) -> None:
         #Polymorphic implementation
         raise NotImplementedError
+
+    @abstractmethod
+    def to_dict(self) -> dict:
+        pass
