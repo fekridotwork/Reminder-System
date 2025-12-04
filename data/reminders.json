@@ -1,0 +1,13 @@
+[
+    {
+        "type": "meeting",
+        "title": "Project Meeting",
+        "time": "14:00",
+        "rem_id": 1,
+        "participants": [
+            "Ali",
+            "Sara",
+            "Hamid"
+        ]
+    }
+]
