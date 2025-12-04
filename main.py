@@ -1,3 +1,4 @@
+import logging
 from models.DailyRoutineReminder import DailyRoutineReminder
 from models.MeetingReminder import MeetingReminder
 from models.SimpleReminder import SimpleReminder
@@ -9,7 +10,8 @@ def get_data(msg):
         if data :
             return data
         else:
-            print("This input can not be empty. --> Try again") # Adding log error
+            print("This input can not be empty. --> Try again")
+            logging.error("Empty input received from user.")
 
 def id_generator():
     current = 0

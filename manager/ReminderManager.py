@@ -1,4 +1,6 @@
 from manager.file_manager import load_data, save_data
+import logging
+from logging.handlers import RotatingFileHandler
 
 
 class ReminderManager:
@@ -8,18 +10,31 @@ class ReminderManager:
     def __init__(self):
         self.reminders = load_data(self.JSON_PATH)
 
+        handler = RotatingFileHandler(
+            self.LOG_PATH,
+            maxBytes=100_000,  # 100 KB
+            backupCount=3
+        )
+
+        logging.basicConfig(
+            level=logging.INFO,
+            handlers=[handler],
+            format="%(asctime)s - %(levelname)s - %(message)s"
+        )
+
     def add_reminder(self, reminder):
         self.reminders.append(reminder)
         save_data(self.JSON_PATH, self.reminders)
-        # Log
+        logging.info(f"Added reminder {reminder.rem_id} ({reminder.title})")
 
     def remove_reminder(self, rem_id):
         for rem in self.reminders:
             if rem.rem_id == rem_id:
                 self.reminders.remove(rem)
                 save_data(self.JSON_PATH, self.reminders)
-                # Log
+                logging.warning(f"Removed reminder {rem_id}")
                 return True
+        logging.error(f"Tried to remove non-existing reminder {rem_id}")
         return False
     def list_reminders(self):
         for r in self.reminders:
@@ -40,7 +55,7 @@ class ReminderManager:
 
     def execute_all(self):
         for r in self.reminders:
-            # log
+            logging.info(f"Executing reminder {r.rem_id}")
             r.remind()
 
     def search_reminder(self, rem_id):
