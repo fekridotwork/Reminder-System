@@ -2,8 +2,8 @@ from manager.file_manager import load_data, save_data
 
 
 class ReminderManager:
-    JSON_PATH = "REMINDER-SYSTEM/data/reminders.json"
-    LOG_PATH = "REMINDER-SYSTEM/data/reminders.log"
+    JSON_PATH = "data/reminders.json"
+    LOG_PATH = "logs/reminder.log"
 
     def __init__(self):
         self.reminders = load_data(self.JSON_PATH)
