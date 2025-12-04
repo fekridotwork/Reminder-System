@@ -1,1 +1,6 @@
 .idea/
+manager/__init__.py
+models/__init__.py
+HW12.pdf
+manager/ReminderManager.py
+main.py
