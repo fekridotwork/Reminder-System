@@ -44,6 +44,7 @@ OUTPUT Example:
 5) Reminder grouping
 6) Finding a reminder by id
 7) Exit
+   
 Choose an option: 1
 
 Choose reminder type:
@@ -51,9 +52,11 @@ Choose reminder type:
   2) Meeting
   3) Daily Routine
 Type of reminder: :2
+
 Please enter the reminder title.Project Meeting
 Please enter the reminder time: 14:00
 Please enter the name of the participants: Ali Sara Hamid
+
 Reminder added!
 
 --- Reminder Manager ---
@@ -64,6 +67,8 @@ Reminder added!
 5) Reminder grouping
 6) Finding a reminder by id
 7) Exit
+   
 Choose an option: 7
+
 Goodbye!
 
