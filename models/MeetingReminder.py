@@ -1,10 +1,10 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from models.Reminder import Reminder
 
 
 @dataclass
 class MeetingReminder(Reminder):
-    participants: list
+    participants: list = field(default_factory=list)
 
     # overriding abstractmethod
     def remind(self) -> None:

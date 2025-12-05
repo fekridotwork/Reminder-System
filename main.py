@@ -26,6 +26,7 @@ def parse_time(text):
 def main():
 
     manager = ReminderManager()
+    manager.start_scheduler()
 
     while True:
         print("\n--- Reminder Manager ---")

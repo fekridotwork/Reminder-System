@@ -7,7 +7,7 @@ class SimpleReminder(Reminder):
 
     #overriding abstract method
     def remind(self) -> None:
-        print(f"It's time to {self.title}")
+        print(f"\nIt's time to {self.title}")
 
     #overriding abstract method
     def to_dict(self):

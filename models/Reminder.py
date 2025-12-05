@@ -6,6 +6,7 @@ class Reminder(ABC):
     title: str
     time: str
     rem_id: int
+    done: bool = False
 
     @abstractmethod
     def remind(self) -> None:

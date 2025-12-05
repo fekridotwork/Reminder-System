@@ -8,3 +8,11 @@
 2025-12-05 11:38:36,673 - INFO - Executing reminder 1
 2025-12-05 11:38:36,673 - INFO - Executing reminder 2
 2025-12-05 11:38:36,674 - INFO - Executing reminder 3
+2025-12-05 12:53:20,070 - ERROR - Empty input received from user.
+2025-12-05 12:53:20,514 - ERROR - Empty input received from user.
+2025-12-05 12:54:05,374 - INFO - Added reminder 2 (Test)
+2025-12-05 12:55:06,953 - INFO - [Scheduler] Auto-executing reminder 2 at 12:55
+2025-12-05 13:01:18,347 - WARNING - Removed reminder 2
+2025-12-05 13:02:01,997 - ERROR - Empty input received from user.
+2025-12-05 13:02:42,968 - INFO - Added reminder 2 (Test on scheduler)
+2025-12-05 13:03:00,890 - INFO - [Scheduler] Auto-executing reminder 2 at 13:03

@@ -1,6 +1,10 @@
-from manager.file_manager import load_data, save_data
 import logging
 from logging.handlers import RotatingFileHandler
+import threading
+import time
+from datetime import datetime
+
+from manager.file_manager import load_data, save_data
 
 
 class ReminderManager:
@@ -9,6 +13,7 @@ class ReminderManager:
 
     def __init__(self):
         self.reminders = load_data(self.JSON_PATH)
+        self.scheduler_thread = None
 
         handler = RotatingFileHandler(
             self.LOG_PATH,
@@ -21,6 +26,31 @@ class ReminderManager:
             handlers=[handler],
             format="%(asctime)s - %(levelname)s - %(message)s"
         )
+
+    def start_scheduler(self, interval_seconds: int = 5):
+
+        if self.scheduler_thread is not None:
+            return
+
+        def run():
+            while True:
+                now = datetime.now().strftime("%H:%M")
+                executed = False
+
+                for r in self.reminders:
+                    if r.time == now and not r.done:
+                        logging.info(f"[Scheduler] Auto-executing reminder {r.rem_id} at {now}")
+                        r.remind()
+                        r.done = True
+                        executed = True
+
+                if executed:
+                    save_data(self.JSON_PATH, self.reminders)
+
+                time.sleep(interval_seconds)
+
+        self.scheduler_thread = threading.Thread(target=run, daemon=True)
+        self.scheduler_thread.start()
 
     def add_reminder(self, reminder):
         self.reminders.append(reminder)
