@@ -3,7 +3,7 @@ from models.DailyRoutineReminder import DailyRoutineReminder
 from models.MeetingReminder import MeetingReminder
 from models.SimpleReminder import SimpleReminder
 from manager.ReminderManager import ReminderManager
-from models.id_generator import id_gen
+from id_generator import id_gen
 import dateparser
 
 def get_data(msg):
