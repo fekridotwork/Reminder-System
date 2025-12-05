@@ -59,10 +59,10 @@ def main():
                 reminder = SimpleReminder(rem_title, rem_time, rem_id)
             elif rem_type == "2":
                 participants = input("\nPlease enter the name of the participants: ").split()
-                reminder = MeetingReminder(rem_title, rem_time, rem_id, participants)
+                reminder = MeetingReminder(rem_title, rem_time, rem_id, participants=participants)
             elif rem_type == "3":
                 while True:
-                    repeat = input("\nDo you want a daily repeat? (y/n)")
+                    repeat = input("\nDo you want a daily repeat(y/n)? ")
                     if repeat == "y":
                         reminder = DailyRoutineReminder(rem_title, rem_time, rem_id)
                         break
@@ -73,6 +73,8 @@ def main():
                         print("\nInvalid option --> Try again")
                         continue
             else:
+                print("\nInvalid option --> Try again")
+                logging.error(f"Invalid menu option entered.")
                 continue
 
             manager.add_reminder(reminder)
@@ -84,6 +86,7 @@ def main():
                 print("\nRemoved successfully.")
             else:
                 print("\nReminder not found.")
+                logging.error(f"Reminder not found.")
 
         elif choice == "3":
             manager.list_reminders()
@@ -100,17 +103,14 @@ def main():
         elif choice == "6":
             r_id = int(get_data("\nEnter ID: "))
             r = manager.search_reminder(r_id)
-            if r:
-                print(r)
-                r.remind()
-            else:
-                print("\nNot found.")
+            print(r)
 
         elif choice == "7":
             print("\nGoodbye!")
             break
         else:
             print("\nInvalid option --> Try again")
+            logging.error(f"Invalid menu option entered.")
 
 if __name__ == "__main__":
     main()

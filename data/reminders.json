@@ -1,27 +1,25 @@
 [
     {
+        "type": "simple",
+        "title": "HW deadline",
+        "time": "13:32",
+        "rem_id": 1
+    },
+    {
+        "type": "daily",
+        "title": "Night class",
+        "time": "00:00",
+        "rem_id": 3,
+        "daily_repeat": true
+    },
+    {
         "type": "meeting",
-        "title": "Group meeting",
-        "time": "13:35",
-        "rem_id": 1,
-        "participants": []
-    },
-    {
-        "type": "simple",
         "title": "Presentation",
-        "time": "16:37",
-        "rem_id": 3
-    },
-    {
-        "type": "simple",
-        "title": "Test",
-        "time": "12:55",
-        "rem_id": 2
-    },
-    {
-        "type": "simple",
-        "title": "Test on scheduler",
-        "time": "13:03",
-        "rem_id": 2
+        "time": "15:00",
+        "rem_id": 4,
+        "participants": [
+            "Me",
+            "Mentor"
+        ]
     }
 ]

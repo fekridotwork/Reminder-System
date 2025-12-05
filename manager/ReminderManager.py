@@ -3,7 +3,7 @@ from logging.handlers import RotatingFileHandler
 import threading
 import time
 from datetime import datetime
-
+from models.DailyRoutineReminder import DailyRoutineReminder
 from manager.file_manager import load_data, save_data
 
 
@@ -31,6 +31,7 @@ class ReminderManager:
 
         if self.scheduler_thread is not None:
             return
+        logging.info("Scheduler started.")
 
         def run():
             while True:
@@ -38,12 +39,22 @@ class ReminderManager:
                 executed = False
 
                 for r in self.reminders:
-                    if r.time == now and not r.done:
-                        logging.info(f"[Scheduler] Auto-executing reminder {r.rem_id} at {now}")
-                        print("\a", end="")
-                        r.remind()
-                        r.done = True
-                        executed = True
+                    if r.time == now:
+
+                        # Daily repeating reminders never marked as done
+                        if isinstance(r, DailyRoutineReminder) and r.daily_repeat:
+                            logging.info(f"[Scheduler] Auto-executing DAILY reminder {r.rem_id} at {now}")
+                            print("\a", end="")
+                            r.remind()
+                            executed = True
+
+                        # One-time reminders
+                        elif not r.done:
+                            logging.info(f"[Scheduler] Auto-executing reminder {r.rem_id} at {now}")
+                            print("\a", end="")
+                            r.remind()
+                            r.done = True
+                            executed = True
 
                 if executed:
                     save_data(self.JSON_PATH, self.reminders)
@@ -68,7 +79,15 @@ class ReminderManager:
         logging.error(f"Tried to remove non-existing reminder {rem_id}")
         return False
     def list_reminders(self):
-        for r in self.reminders:
+        if not self.reminders:
+            print("\nNo reminders found.")
+            return
+
+        print("\n--- Reminders ---")
+        sorted_list = sorted(self.reminders, key=lambda r: r.rem_id)
+
+        for r in sorted_list:
+            r_type = type(r).__name__
             print(f"[{r.rem_id}] {r.title} at {r.time}")
 
     def group_reminders(self):
