@@ -32,6 +32,8 @@ How to Run :
 
 python3 main.py
 
+---
+
 OUTPUT Example:
 --- Reminder Manager ---
 1) Add reminder
