@@ -8,8 +8,8 @@ class MeetingReminder(Reminder):
 
     # overriding abstractmethod
     def remind(self) -> None:
-        print(f"Meeting Reminder: {self.title}")
-        print("Participants:")
+        print(f"\nMeeting Reminder: {self.title}")
+        print("\nParticipants:")
         for p in self.participants:
             print(f"  - {p}")
 

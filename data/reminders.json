@@ -1,13 +1,24 @@
 [
     {
         "type": "meeting",
-        "title": "Project Meeting",
-        "time": "14:00",
+        "title": "Group meeting",
+        "time": "13:35",
         "rem_id": 1,
         "participants": [
-            "Ali",
-            "Sara",
-            "Hamid"
+            "Amirali"
         ]
+    },
+    {
+        "type": "daily",
+        "title": "Night class",
+        "time": "21:00",
+        "rem_id": 2,
+        "daily_repeat": true
+    },
+    {
+        "type": "simple",
+        "title": "Presentation",
+        "time": "16:37",
+        "rem_id": 3
     }
 ]

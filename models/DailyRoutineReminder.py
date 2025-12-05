@@ -8,7 +8,7 @@ class DailyRoutineReminder(Reminder):
 
     #overriding abstractmethod
     def remind(self) -> None:
-        print(f"Daily Routine Reminder : {self.title}")
+        print(f"\nDaily Routine Reminder : {self.title}")
 
     # overriding abstractmethod
     def to_dict(self):
