@@ -35,6 +35,7 @@ python3 main.py
 ---
 
 OUTPUT Example:
+
 --- Reminder Manager ---
 1) Add reminder
 2) Remove reminder
