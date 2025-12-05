@@ -16,12 +16,13 @@ def get_data(msg):
             logging.error("Empty input received from user.")
 
 def parse_time(text):
-    dt = dateparser.parse(text)
-    if not dt:
+    data = dateparser.parse(text)
+    if not data:
         print("\nCould not understand time. Please try again.")
+        logging.error("Could not understand time input received from user.")
         return None
 
-    return dt.strftime("%H:%M")
+    return data.strftime("%H:%M")
 
 def main():
 

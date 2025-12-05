@@ -17,7 +17,7 @@ class ReminderManager:
 
         handler = RotatingFileHandler(
             self.LOG_PATH,
-            maxBytes=100_000,  # 100 KB
+            maxBytes=1_000,  # 100 KB
             backupCount=3
         )
 

@@ -14,12 +14,15 @@
     },
     {
         "type": "meeting",
-        "title": "Presentation",
-        "time": "15:00",
-        "rem_id": 4,
-        "participants": [
-            "Me",
-            "Mentor"
-        ]
+        "title": "Meeting",
+        "time": "15:23",
+        "rem_id": 5,
+        "participants": []
+    },
+    {
+        "type": "simple",
+        "title": "Test",
+        "time": "15:31",
+        "rem_id": 6
     }
 ]

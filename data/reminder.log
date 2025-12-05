@@ -1,32 +1,3 @@
-2025-12-04 23:39:35,050 - INFO - Added reminder 1 (Project Meeting)
-2025-12-05 11:01:51,900 - INFO - Added reminder 1 (Presentation)
-2025-12-05 11:34:59,918 - WARNING - Removed reminder 1
-2025-12-05 11:35:53,814 - INFO - Added reminder 1 (Group meeting)
-2025-12-05 11:36:59,344 - INFO - Added reminder 2 (Night class)
-2025-12-05 11:37:24,327 - WARNING - Removed reminder 1
-2025-12-05 11:37:54,699 - INFO - Added reminder 3 (Presentation)
-2025-12-05 11:38:36,673 - INFO - Executing reminder 1
-2025-12-05 11:38:36,673 - INFO - Executing reminder 2
-2025-12-05 11:38:36,674 - INFO - Executing reminder 3
-2025-12-05 12:53:20,070 - ERROR - Empty input received from user.
-2025-12-05 12:53:20,514 - ERROR - Empty input received from user.
-2025-12-05 12:54:05,374 - INFO - Added reminder 2 (Test)
-2025-12-05 12:55:06,953 - INFO - [Scheduler] Auto-executing reminder 2 at 12:55
-2025-12-05 13:01:18,347 - WARNING - Removed reminder 2
-2025-12-05 13:02:01,997 - ERROR - Empty input received from user.
-2025-12-05 13:02:42,968 - INFO - Added reminder 2 (Test on scheduler)
-2025-12-05 13:03:00,890 - INFO - [Scheduler] Auto-executing reminder 2 at 13:03
-2025-12-05 13:27:21,551 - WARNING - Removed reminder 2
-2025-12-05 13:29:02,571 - WARNING - Removed reminder 1
-2025-12-05 13:29:07,166 - ERROR - Tried to remove non-existing reminder 1
-2025-12-05 13:29:14,926 - WARNING - Removed reminder 3
-2025-12-05 13:29:17,891 - WARNING - Removed reminder 2
-2025-12-05 13:30:33,946 - INFO - Added reminder 1 (HW deadline)
-2025-12-05 13:31:31,694 - INFO - Added reminder 2 (Presentation)
-2025-12-05 13:32:04,905 - INFO - [Scheduler] Auto-executing reminder 1 at 13:32
-2025-12-05 13:32:33,223 - INFO - Added reminder 3 (Night class)
-2025-12-05 13:34:30,339 - INFO - Executing reminder 1
-2025-12-05 13:34:30,340 - INFO - Executing reminder 2
-2025-12-05 13:34:30,340 - INFO - Executing reminder 3
-2025-12-05 13:40:44,678 - WARNING - Removed reminder 2
-2025-12-05 13:41:13,383 - INFO - Added reminder 4 (Presentation)
+2025-12-05 15:29:15,806 - INFO - Scheduler started.
+2025-12-05 15:29:56,112 - INFO - Added reminder 6 (Test)
+2025-12-05 15:31:00,813 - INFO - [Scheduler] Auto-executing reminder 6 at 15:31
