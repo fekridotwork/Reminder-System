@@ -1,4 +1,6 @@
 import json
+import logging
+
 from models.SimpleReminder import SimpleReminder
 from models.MeetingReminder import MeetingReminder
 from models.DailyRoutineReminder import DailyRoutineReminder
@@ -17,7 +19,9 @@ def from_dict(obj):
         return DailyRoutineReminder(obj["title"], obj["time"], obj["rem_id"], obj["daily_repeat"])
 
     else:
+        logging.error("Unknown reminder type in JSON")
         raise ValueError("Unknown reminder type in JSON")
+
 
 
 def to_dict(reminder):
@@ -29,7 +33,7 @@ def load_data(path):
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
             return [from_dict(item) for item in data]
-    except:
+    except Exception:
         return []
 
 
