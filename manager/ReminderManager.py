@@ -40,6 +40,7 @@ class ReminderManager:
                 for r in self.reminders:
                     if r.time == now and not r.done:
                         logging.info(f"[Scheduler] Auto-executing reminder {r.rem_id} at {now}")
+                        print("\a", end="")
                         r.remind()
                         r.done = True
                         executed = True
@@ -86,6 +87,7 @@ class ReminderManager:
     def execute_all(self):
         for r in self.reminders:
             logging.info(f"Executing reminder {r.rem_id}")
+            print("\a", end="")
             r.remind()
 
     def search_reminder(self, rem_id):
