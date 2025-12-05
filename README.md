@@ -53,8 +53,10 @@ Choose reminder type:
   3) Daily Routine
 Type of reminder: :2
 
-Please enter the reminder title.Project Meeting
+Please enter the reminder title: Project Meeting
+
 Please enter the reminder time: 14:00
+
 Please enter the name of the participants: Ali Sara Hamid
 
 Reminder added!
